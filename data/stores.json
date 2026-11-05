@@ -1,0 +1,90 @@
+[
+  {
+    "id": "komorebi",
+    "name": "こもれび",
+    "category": "cafe",
+    "businessType": "スコーン＆スムージー",
+    "description": "名護市営市場1階にある、スコーンとスムージーのお店「こもれび」。焼きたてのスコーンや、沖縄らしいフルーツを使ったスムージーを楽しめます。名護のまち歩きの途中に、ぜひお立ち寄りください。",
+    "address": "沖縄県名護市城1丁目4-11 名護市営市場1階",
+    "hours": "10:00〜17:00",
+    "closedDays": "日曜日・祝日",
+    "website": "https://komorebi-nago.com",
+    "image": null,
+    "imageAlt": "こもれびの店舗写真",
+    "location": {
+      "lat": 26.589505620738,
+      "lng": 127.98414739081
+    },
+    "socialLinks": [],
+    "isDemo": false,
+    "type": "store"
+  },
+  {
+    "id": "demo-craft",
+    "name": "やんばる手しごと店（デモ）",
+    "category": "craft",
+    "description": "暮らしにそっとなじむ、小さな手しごと。",
+    "address": "架空住所：名護サンプル通り2",
+    "hours": "デモ 11:00〜18:00",
+    "website": "",
+    "image": null,
+    "location": {
+      "lng": 127.985,
+      "lat": 26.5901
+    },
+    "socialLinks": [],
+    "isDemo": true,
+    "type": "store"
+  },
+  {
+    "id": "demo-food",
+    "name": "まちかど食堂（デモ）",
+    "category": "food",
+    "description": "まち歩きの途中に、あたたかなひと皿。",
+    "address": "架空住所：名護サンプル通り3",
+    "hours": "デモ 11:00〜15:00",
+    "website": "",
+    "image": null,
+    "location": {
+      "lng": 127.9853,
+      "lat": 26.5888
+    },
+    "socialLinks": [],
+    "isDemo": true,
+    "type": "store"
+  },
+  {
+    "id": "demo-coffee",
+    "name": "路地の珈琲室（デモ）",
+    "category": "cafe",
+    "description": "ゆっくり流れる時間と、香り豊かな一杯。",
+    "address": "架空住所：名護サンプル通り4",
+    "hours": "デモ 09:00〜16:00",
+    "website": "",
+    "image": null,
+    "location": {
+      "lng": 127.9827,
+      "lat": 26.5902
+    },
+    "socialLinks": [],
+    "isDemo": true,
+    "type": "store"
+  },
+  {
+    "id": "demo-rest",
+    "name": "ひとやすみ広場（デモ）",
+    "category": "rest",
+    "description": "木陰のベンチで、次の寄り道を考えよう。",
+    "address": "架空住所：名護サンプル通り5",
+    "hours": "デモ 日中",
+    "website": "",
+    "image": null,
+    "location": {
+      "lng": 127.9839,
+      "lat": 26.5884
+    },
+    "socialLinks": [],
+    "isDemo": true,
+    "type": "rest"
+  }
+]
