@@ -1,6 +1,7 @@
 import {mapConfig} from './map-config.js';
 import {toGeoJSON,preferJapanese} from './map-data.js';
 import {addBuildingViewControl} from './building-view.js';
+import {addBackgroundControl} from './background-view.js';
 
 export async function createRoadMap(container,initialStores,onSelect,onStatus){
   const {Map,NavigationControl,AttributionControl,ScaleControl,Popup,setWorkerUrl}=await import('../../vendor/maplibre/maplibre-gl.mjs');
@@ -23,7 +24,8 @@ export async function createRoadMap(container,initialStores,onSelect,onStatus){
       const timer=setTimeout(()=>{cleanup();reject(new Error('地図の読み込みが時間内に完了しませんでした。'));},mapConfig.timeoutMs);
       map.once('load',loaded);map.on('error',failed);
     });
-    addBuildingViewControl(map,container);
+    const buildings=addBuildingViewControl(map,container);
+    addBackgroundControl(map,container,buildings,onStatus);
     map.addSource('km-spots',{type:'geojson',data:toGeoJSON(stores),cluster:true,clusterRadius:35,clusterMaxZoom:mapConfig.clusterMaxZoom});
     map.addLayer({id:'km-clusters',type:'circle',source:'km-spots',filter:['has','point_count'],paint:{'circle-color':'#42634d','circle-radius':23,'circle-stroke-width':3,'circle-stroke-color':'#fffef9'}});
     map.addLayer({id:'km-cluster-count',type:'symbol',source:'km-spots',filter:['has','point_count'],layout:{'text-field':['get','point_count_abbreviated'],'text-font':['Noto Sans Regular'],'text-size':14,'text-allow-overlap':true},paint:{'text-color':'#ffffff'}});

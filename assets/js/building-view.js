@@ -32,4 +32,5 @@ export function addBuildingViewControl(map,container){
   panel.addEventListener('dblclick',event=>event.stopPropagation());
   update();
   map.addControl({onAdd(){return panel;},onRemove(){panel.remove();}},'top-right');
+  return {getMode:()=>mode,setMode,setEnabled(enabled){for(const button of Object.values(buttons))button.disabled=!enabled;panel.title=enabled?'':'国土地理院は平面の画像地図です。OpenFreeMapに戻すと切り替えできます。';}};
 }
