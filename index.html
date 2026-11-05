@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="assets/images/leaf.svg" type="image/svg+xml"><title>こもれび | まち歩きマップ（試作）</title><link rel="stylesheet" href="vendor/maplibre/maplibre-gl.css"><link rel="stylesheet" href="assets/css/map.css"></head>
+<body><div class="km-app">
+<header class="km-header"><a class="km-brand" href="./">こもれび<span>SCONE & SMOOTHIE</span></a><span class="km-header-label">名護のまちを、ゆっくり歩こう。</span><span class="km-badge">TEST MAP</span></header>
+<main><section class="km-intro"><p class="km-eyebrow">HELLO, NAGO.</p><h1>ちょっと寄り道、<br class="km-mobile">まちのこもれび。</h1><p>おやつのお店、手しごと、ひと休み。<br>気になる場所を選んで、まち歩きの気分を味わってみませんか。</p></section>
+<div class="km-notice"><strong>APIキー不要の試作品</strong><span id="km-data-notice">実店舗とデモ店舗を掲載しています。</span></div>
+<section class="km-explorer" aria-label="店舗一覧と道路地図">
+<aside class="km-list-panel"><div class="km-section-title"><h2>まちのスポット</h2><span id="km-count">読み込み中</span></div><p class="km-hint">お店を選ぶと、その位置へ地図が移動します。</p><div id="km-store-list" class="km-store-list"></div></aside>
+<section class="km-map-panel" aria-label="店舗選択用の道路地図"><div class="km-map-heading"><span>名護市営市場周辺</span><span class="km-map-badge">実地図 / 実店舗＋デモ</span></div>
+<div class="km-map-tools"><button id="km-home" type="button" disabled>市場周辺に戻る</button><span>数字のまとまりは、タップすると拡大します</span></div><div id="km-map" class="km-map" aria-label="名護市営市場周辺の道路地図"></div><div class="km-map-feedback"><p id="km-map-status" role="status">地図が画面に近づくと読み込みます。</p><button id="km-map-retry" type="button" hidden>地図を再読み込み</button></div>
+<div id="km-legend" class="km-legend" aria-label="カテゴリーの色"></div><div id="km-detail" class="km-detail" aria-live="polite"></div></section>
+</section><p id="km-status" class="km-status" role="status">店舗データを読み込んでいます。</p><button id="km-retry" type="button" hidden>再読み込み</button>
+<footer>こもれびの近隣マップ <span>道路地図版 · テスト公開 / OpenFreeMapに接続</span></footer></main></div>
+<noscript>店舗を表示するにはJavaScriptを有効にしてください。</noscript><script type="module" src="assets/js/app.js"></script></body></html>
